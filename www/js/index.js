@@ -37,6 +37,7 @@ function transactionError(tx, error) {
 function onDeviceReady() {
     log(`Device is ready.`);
     prepareDatabase(db);
+    console.log(navigator.vibrate);
     /*db.transaction(function (tx) {
         tx.executeSql('DROP TABLE Estate');
         tx.executeSql('DROP TABLE City');
@@ -516,3 +517,14 @@ function closeWindow(){
 function closeWindow1(){
     $('#page-detail #frm-update').popup('close');
 }
+
+$(document).on('vclick', '#btn-cordova-beep', cordovaBeep);
+
+function cordovaBeep() {
+    navigator.notification.beep(1);
+}
+
+function cordovaVibration() {
+    navigator.vibrate(3000);
+}
+

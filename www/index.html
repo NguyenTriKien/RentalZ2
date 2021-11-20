@@ -22,7 +22,8 @@
 
         <div data-role="main" class="ui-content">
             <h1>RENTALZ</h1>
-            <img src="img/houselogo.jpg" width="100%"><br><br>
+            <button id="btn-cordova-beep">Beep</button>
+            <button id="btn-cordova-vibrate" onclick="cordovaVibration()">Vibrate</button>
         </div>
         
         <div data-role="footer" data-position="fixed">
@@ -76,8 +77,8 @@
                     <option value = "1">Half Furnished</option>
                     <option value = "2">Furnished</option>
                 </select>
-                <input type="text" placeholder="Monthly rent price (required field)" id="Rentprice" required>
-                <input type="text" placeholder="Bedroom (required field)" id="Bedroom" required>
+                <input type="number" placeholder="Monthly rent price (required field)" id="Rentprice" required>
+                <input type="number" placeholder="Bedroom (required field)" id="Bedroom" required>
                 <input type="text" placeholder="Reporter (required field)" id="Reporter" required>
                 <button type="submit">Add new Appartment</button>
             </form>
